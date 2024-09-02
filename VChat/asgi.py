@@ -7,7 +7,7 @@ For more information on this file, see
 https://docs.djangoproject.com/en/4.2/howto/deployment/asgi/
 """
 
-import os
+import os,sys
 
 from channels.routing import ProtocolTypeRouter
 from django.core.asgi import get_asgi_application
@@ -29,5 +29,8 @@ application = ProtocolTypeRouter(
         )
     }
 )
+
+if os.environ.get('ENV') == 'production':
+    sys.path.append(os.path.dirname(os.path.dirname(__file__)))
 
 app = application
