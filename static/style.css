@@ -1,0 +1,18 @@
+body{
+    background-color: rgb(239, 201, 152);
+}
+
+#id_message_send_input{
+    width: 40vw;
+    height: auto;
+    padding: 10px;
+    border-radius: 25px;
+    font: large;
+}
+
+.msg{
+    background-color: rgb(70, 248, 70);
+    width: fit-content;
+    padding: 5px;
+    border-radius: 25px;
+}
