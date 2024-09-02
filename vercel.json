@@ -1,13 +1,13 @@
 {
     "builds": [{
-        "src": "VChat/wsgi.py",
+        "src": "VChat/asgi.py",
         "use": "@vercel/python",
         "config": { "maxLambdaSize": "15mb", "runtime": "python3.9" }
     }],
     "routes": [
         {
             "src": "/(.*)",
-            "dest": "VChat/wsgi.py"
+            "dest": "VChat/asgi.py"
         }
     ]
 }
